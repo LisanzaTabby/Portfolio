@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo3.png" class="logo">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headertext">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Tabitha</span> <br>Lisanza From Kenya</h1>
+            </div>
+        </div>
+
+    </div>
+<!------------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="images/face2.png">
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quis, exercitationem, alias reprehenderit porro numquam magnam illum et vero aut non impedit neque totam qui debitis. Voluptatum porro eius beatae?</p>
+                    <div class="tabtitles">
+                        <p class="tablinks active-link"onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks"onclick="opentab('experience')">Experience</p>
+                        <p class="tablinks"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontents active-tab"id="skills">
+                        <ul>
+                            <li><span>Front-End</span><br>Web Development</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Desktop Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents"id="experience">
+                        <ul>
+                            <li><span>2021 - Current </span><br>Front-End Development at Lotus Trust Foundation</li>
+                            <li><span>2019-2021</span><br>Team Lead at Lotus Fpoundation</li>
+                            <li><span>2017-2019</span><br>HTML and CSS Developer at Africa International University</li>
+                        </ul>
+                    </div>
+                    <div class="tabcontents"id="education">
+                        <ul>
+                            <li><span>2021- Current</span><br>BSc in information Technology at Africa International University</li>
+                            <li><span>2017- 2021</span><br>Our Lady of Mercy Secondary School South B</li>
+                            <li><span>2006- 2016</span><br>The Excellence School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------------------services--------------------------------->
+<div class="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="serviceslist">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tenetur sit libero porro dolorum optio, delectus fugiat, officiis velit debitis assumenda.</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <h2>Front-End Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tenetur sit libero porro dolorum optio, delectus fugiat, officiis velit debitis assumenda.</p>
+                <a href="">Learn more</a>
+            </div>
+            <div>
+                <h2>App Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tenetur sit libero porro dolorum optio, delectus fugiat, officiis velit debitis assumenda. </p>
+                <a href="">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------Portfolio----------------->
+<div class="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/Chocoweb1.jpg">
+                <div class="layer">
+                    <h3>Chocolate Bakery Web App</h3>
+                    <p>This app allows you to shop for all the chocolate cakes from the webapp</p>
+                    <a href="">Visit</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/doughnuts.jpg">
+                <div class="layer">
+                    <h3>Doughnuts Shop Web App</h3>
+                    <p>This app allows you to shop for all the Douhnuts from the webapp</p>
+                    <a href="">Visit</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/bread.jpg">
+                <div class="layer">
+                    <h3>Bread Bakery Web App</h3>
+                    <p>This app allows you to shop for all the Bread from the webapp</p>
+                    <a href="">Visit</a>
+                </div>
+            </div>
+        </div>
+        <a href="#"class="btn">See more</a>
+    </div>
+</div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tabcontents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
